@@ -1,4 +1,4 @@
-// Select elements
+
 const checkbox = document.querySelector('[data-testid="test-todo-complete-toggle"]');
 const title = document.querySelector('[data-testid="test-todo-title"]');
 const status = document.querySelector('[data-testid="test-todo-status"]');
@@ -7,7 +7,7 @@ const deleteBtn = document.querySelector('[data-testid="test-todo-delete-button"
 const timeRemainingEl = document.querySelector('[data-testid="test-todo-time-remaining"]');
 const dueDateEl = document.querySelector('[data-testid="test-todo-due-date"]');
 
-// ✅ Checkbox toggle
+// Checkbox toggle
 checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
         title.classList.add("completed");
@@ -18,7 +18,7 @@ checkbox.addEventListener("change", () => {
     }
 });
 
-// ✅ Edit & Delete actions
+// Edit & Delete actions
 editBtn.addEventListener("click", () => {
     console.log("edit clicked");
 });
@@ -27,7 +27,7 @@ deleteBtn.addEventListener("click", () => {
     alert("Delete clicked");
 });
 
-// ✅ Time remaining logic
+// Time remaining logic
 function updateTimeRemaining() {
     const dueDate = new Date(dueDateEl.getAttribute("datetime"));
     const now = new Date();
@@ -58,8 +58,6 @@ function updateTimeRemaining() {
     timeRemainingEl.textContent = text;
 }
 
-// Run once immediately
-updateTimeRemaining();
 
-// Optional auto update (safe for requirement)
+updateTimeRemaining();
 setInterval(updateTimeRemaining, 60000);
