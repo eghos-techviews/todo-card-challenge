@@ -3,7 +3,7 @@
 Stage 1 Submission
 
 Live Demo
-	•	Todo Card (Stage 1A): https://regal-faun-7b85aa.netlify.app/index.html
+	•	Todo Card (Stage 1A): https://regal-faun-7b85aa.netlify.app/
 	
     
 GitHub Repository
