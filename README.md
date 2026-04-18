@@ -6,8 +6,8 @@ Stage 1 Submission
 
 Live Demo
 	•	Todo Card (Stage 1A): https://regal-faun-7b85aa.netlify.app/index.html
-	•	Profile Card (Stage 1B): https://regal-faun-7b85aa.netlify.app/profile.html
-
+	
+    
 GitHub Repository
 
 https://github.com/eghos-techviews/todo-card-challenge.git
@@ -16,15 +16,11 @@ https://github.com/eghos-techviews/todo-card-challenge.git
 
 Overview
 
-This project contains two components:
+This project contains an Advanced Todo Card (Interactive & Stateful):
 
 1. Todo Card (Stage 1A)
 
 An interactive, stateful todo card built with vanilla HTML, CSS, and JavaScript.
-
-2. Profile Card (Stage 1B)
-
-A responsive and accessible profile card component with dynamic time updates.
 
 
 Stage 1A — Improvements from Stage 0
@@ -39,18 +35,6 @@ Stage 1A — Improvements from Stage 0
 	•	Improved responsive layout
 
 
-
-Stage 1B — Features
-	•	Semantic HTML structure using <article>, <section>, <nav>, <figure>
-	•	Dynamic epoch time (Date.now())
-	•	Accessible avatar image with alt text
-	•	Social links with:
-	•	target="_blank"
-	•	rel="noopener noreferrer"
-	•	Hobbies and dislikes lists
-	•	Responsive layout (mobile → desktop)
-	•	Keyboard accessible navigation
-	•	aria-live="polite" for time updates
 
 
 
@@ -71,12 +55,11 @@ Limitations
 How to Run Locally
 	1.	Clone the repo
 	2.	Open folder in VS Code
-	3.	Open index.html or profile.html in browser
+	3.	Open index.html in browser
 
 
 Design Decisions
 	•	Used vanilla JS to demonstrate core DOM/state understanding
-	•	Centralized state management for Todo Card
 	•	Kept UI minimal but functional for clarity and performance
 
 ⸻
