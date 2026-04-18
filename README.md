@@ -1,5 +1,3 @@
-:::writing{variant=“standard” id=“84219”}
-
 ⸻
 
 Stage 1 Submission
@@ -64,4 +62,4 @@ Design Decisions
 
 ⸻
 
-:::
+
