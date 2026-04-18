@@ -1,63 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Todo Card Challenge</title>
-        <link rel="stylesheet" href="style.css"> 
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Card Challenge</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
 
-    <body>
-        
-        <main>
-            <section role="region" class="card-container" data-testid="test-todo-card">
-                <h2 data-testid="test-todo-title">Todo Item Card</h2>
-                <p data-testid="test-todo-description">Design and implement a responsive todo card component with proper accessibility, including dynamic time tracking, priority indication, and user interaction features such as completion toggle, edit, and delete actions.</p>
-                
-                <div class="meta">
-                    <div>
-                        <strong>Priority:</strong>
-                        <span data-testid="test-todo-priority">High</span>
-                    </div>
+<body>
+<main>
+<section role="region" class="card-container" data-testid="test-todo-card">
 
-                    <div>
-                        <strong>Status:</strong>
-                        <span data-testid="test-todo-status">Pending</span>
-                    </div>
-                </div>
-                <div class="time-info">
-                    <time data-testid="test-todo-due-date" datetime="2026-04-16T20:00">
-                        Due April 16, 2026
-                    </time>
+    <div class="view-mode">
+        <h2 data-testid="test-todo-title">Todo Item Card</h2>
 
-                    <time data-testid="test-todo-time-remaining">
-                        Due in 2 days
-                    </time>
-                </div>
+        <button 
+            data-testid="test-todo-expand-toggle" 
+            aria-expanded="false" 
+            aria-controls="desc-section">
+            Expand
+        </button>
 
-                <div class="checkbox">
-                    <input 
-                        type="checkbox" 
-                        id="complete-task" 
-                        data-testid="test-todo-complete-toggle">
+        <div data-testid="test-todo-collapsible-section" id="desc-section">
+            <p data-testid="test-todo-description">
+                Design and implement a responsive todo card component with proper accessibility, including dynamic time tracking, priority indication, and user interaction features such as completion toggle, edit, and delete actions.
+            </p>
+        </div>
 
-                    <label for="complete-task">Mark as complete</label>
-                </div>
-                <ul data-testid="test-todo-tags" role="list">
-                    <li data-testid="test-todo-tag-work">Work</li>
-                    <li data-testid="test-todo-tag-urgent">Urgent</li>
-                    <li>Design</li>
-                </ul>       
-                <div class="actions">
-                    <button data-testid="test-todo-edit-button">Edit</button>
-                    <button data-testid="test-todo-delete-button">Delete</button>
-                </div>
+        <div class="meta">
+            <div class="priority-wrapper">
+                <div data-testid="test-todo-priority-indicator" class="priority-indicator"></div>
+                <span data-testid="test-todo-priority">High</span>
+            </div>
 
-            </section>
-        </main>
+            <div>
+                <strong>Status:</strong>
+                <span data-testid="test-todo-status">Pending</span>
 
+                <label for="status-control" class="visually-hidden">Change status</label>
+                <select id="status-control" data-testid="test-todo-status-control">
+                    <option>Pending</option>
+                    <option>In Progress</option>
+                    <option>Done</option>
+                </select>
+            </div>
+        </div>
 
+        <div class="time-info">
+            <time data-testid="test-todo-due-date" datetime="2026-04-17T23:59">
+                Due April 17, 2026
+            </time>
 
-        <script src="script.js"></script>
-    </body>
+            <time data-testid="test-todo-time-remaining"></time>
+            <span data-testid="test-todo-overdue-indicator"></span>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="complete-task" data-testid="test-todo-complete-toggle">
+            <label for="complete-task">Mark as complete</label>
+        </div>
+
+        <ul data-testid="test-todo-tags" role="list">
+            <li data-testid="test-todo-tag-work">Work</li>
+            <li data-testid="test-todo-tag-urgent">Urgent</li>
+            <li>Design</li>
+        </ul>
+
+        <div class="actions">
+            <button data-testid="test-todo-edit-button">Edit</button>
+            <button data-testid="test-todo-delete-button">Delete</button>
+        </div>
+    </div>
+
+    <div data-testid="test-todo-edit-form" class="edit-form hidden">
+        <label for="edit-title">Title</label>
+        <input id="edit-title" data-testid="test-todo-edit-title-input" type="text">
+
+        <label for="edit-desc">Description</label>
+        <textarea id="edit-desc" data-testid="test-todo-edit-description-input"></textarea>
+
+        <label for="edit-priority">Priority</label>
+        <select id="edit-priority" data-testid="test-todo-edit-priority-select">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select>
+
+        <label for="edit-date">Due Date</label>
+        <input id="edit-date" data-testid="test-todo-edit-due-date-input" type="datetime-local">
+
+        <div class="button-group">
+            <button data-testid="test-todo-save-button">Save</button>
+            <button data-testid="test-todo-cancel-button">Cancel</button>
+        </div>
+    </div>
+
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
 </html>
+

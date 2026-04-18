@@ -24,17 +24,8 @@ main {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.card-container > * {
+.view-mode > * {
     margin-bottom: 15px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-p {
-    font-size: 14px;
-    color: #555;
 }
 
 .meta {
@@ -42,21 +33,25 @@ p {
     justify-content: space-between;
 }
 
-.meta span {
-    padding: 4px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: bold;
+.priority-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.meta span[data-testid="test-todo-priority"] {
-    background-color: #ffe5e5;
-    color: #d9534f;
+.priority-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
 
-.meta span[data-testid="test-todo-status"] {
-    background-color: #e5f0ff;
-    color: #0275d8;
+.priority-indicator.high { background: red; }
+.priority-indicator.medium { background: orange; }
+.priority-indicator.low { background: green; }
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
 }
 
 .time-info {
@@ -65,19 +60,10 @@ p {
     gap: 5px;
 }
 
-.time-info time:first-child {
-    font-weight: bold;
-}
-
-.time-info time:last-child {
-    font-size: 13px;
-    color: #777;
-}
-
 .checkbox {
     display: flex;
-    align-items: center;
     gap: 8px;
+    align-items: center;
 }
 
 ul {
@@ -91,7 +77,6 @@ li {
     background: #eee;
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 12px;
 }
 
 .actions {
@@ -100,14 +85,10 @@ li {
 }
 
 button {
-    padding: 8px 12px;
+    padding: 8px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.8;
 }
 
 button:focus,
@@ -119,3 +100,66 @@ input:focus {
     text-decoration: line-through;
     color: #999;
 }
+
+.hidden {
+    display: none;
+}
+
+/* Collapsed state */
+.collapsed {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 3em;
+}
+
+.collapsed p {
+    text-overflow: ellipsis;
+} 
+
+.edit-form {
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* show when NOT hidden */
+.edit-form:not(.hidden) {
+    display: flex;
+}
+
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.edit-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+
+.edit-form button {
+    margin-top: 5px;
+}
+
+/*save & cancel*/
+.edit-form .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-form label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card</title>
+<link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+<main>
+<article data-testid="test-profile-card" class="card">
+
+    <figure>
+        <img 
+            src="IMG/avatar.jpg" 
+            alt="User avatar photo"
+            data-testid="test-user-avatar">
+        <figcaption data-testid="test-user-name">Martins Aigbe</figcaption>
+    </figure>
+    
+
+    <section>
+        <p data-testid="test-user-bio">
+            Frontend developer in training, building real projects and learning by doing.
+        </p>
+
+        <p>
+            Current Time (ms):
+            <span data-testid="test-user-time" aria-live="polite"></span>
+        </p>
+
+        <nav data-testid="test-user-social-links">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+        </nav>
+
+        <section>
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+                <li>Coding</li>
+                <li>Reading</li>
+                <li>Site seeing</li>
+                <li>Working Out</li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+                <li>Procrastination</li>
+                <li>Bugs</li>
+                <li>Slow internet</li>
+                <li>Dishonesty</li>
+            </ul>
+        </section>
+
+    </section>
+
+</article>
+</main>
+
+<script src="profile.js"></script>
+</body>
+</html>
