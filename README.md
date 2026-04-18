@@ -5,8 +5,8 @@
 Stage 1 Submission
 
 Live Demo
-	•	Todo Card (Stage 1A): https://your-site.netlify.app/index.html
-	•	Profile Card (Stage 1B): https://your-site.netlify.app/profile.html
+	•	Todo Card (Stage 1A): https://regal-faun-7b85aa.netlify.app/index.html
+	•	Profile Card (Stage 1B): https://regal-faun-7b85aa.netlify.app/profile.html
 
 GitHub Repository
 
